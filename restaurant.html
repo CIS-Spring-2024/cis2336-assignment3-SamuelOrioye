@@ -1,0 +1,173 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO WINGS</title>
+    <style>
+        /* CSS styles for colorful layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('jerk.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* No repeating the image */
+            background-position: center; /* Center the image */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        section {
+            display: none; /* Hide all sections by default */
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="font-size: 36px;">GO WINGS</h1>
+</header>
+
+<nav>
+    <a href="#home" style="background-color: #ff6347;">Home</a>
+    <a href="#menu" style="background-color: #ffd700;">Menu</a>
+    <a href="#order" style="background-color: #00ced1;">Order Now</a>
+    <a href="#about" style="background-color: #9370db;">About Us</a>
+</nav>
+
+<section id="home" style="display: block;"> <!-- Display the home section by default -->
+    <h2>Welcome to GO WINGS!</h2>
+    <p>Experience the finest wings at our restaurant. Whether you want something spicy, mild, or in between, we have something for everyone.</p>
+    <p>Explore our menu to discover a variety of wings made with fresh, high-quality ingredients.</p>
+
+    <h2>Our Menu</h2>
+    <p>Check out our mouthwatering selection of dishes:</p>
+    <!-- Insert images of food items with descriptions -->
+    <img src="jerk.jpg" alt="Food Item 1" width="300" height="200">
+    <p>BBQ Jerk Wings</p>
+    <img src="spicy.jpg" alt="Food Item 2" width="300" height="200">
+    <p>Buffalo Spicy Wings</p>
+    <img src="classic.jpg" alt="Food Item 2" width="300" height="200">
+    <p>Classic Wings</p>
+    <!-- Add more food items as needed -->
+
+    <h2>Order Now</h2>
+    <p>Ready to satisfy your cravings? Place your order now!</p>
+    <!-- Add order form or link to online ordering platform -->
+    <p>For online orders, call us at: <a href="tel:+1234567890" style="color: #00ced1;">+1 (832) 782- 5670</a>.</p> <br> <br> <br> <br>
+</section>
+
+<section id="menu">
+    <h2>Our Menu</h2>
+    <p>Check out our mouthwatering selection of dishes:</p>
+    <!-- Insert images of food items with descriptions -->
+    <img src="jerk.jpg" alt="Food Item 1" width="300" height="200">
+    <p>BBQ Jerk Wings</p>
+    <form id="orderForm">
+        <label for="bbqQuantity">Quantity:</label>
+        <input type="number" id="bbqQuantity" name="bbqQuantity" min="0" required><br><br>
+    </form>
+    <img src="spicy.jpg" alt="Food Item 2" width="300" height="200">
+    <p>Buffalo Spicy Wings</p>
+    <form id="orderForm">
+        <label for="buffaloQuantity">Quantity:</label>
+        <input type="number" id="buffaloQuantity" name="buffaloQuantity" min="0" required><br><br>
+    </form>
+    <img src="classic.jpg" alt="Food Item 2" width="300" height="200">
+    <p>Classic Wings</p>
+    <form id="orderForm">
+        <label for="classicQuantity">Quantity:</label>
+        <input type="number" id="classicQuantity" name="classicQuantity" min="0" required><br><br>
+    </form> <br> <br> <br> <br>
+    <!-- Add more food items as needed -->
+    <button onclick="submitOrder()">Place Order</button>
+</section>
+
+<section id="order">
+    <h2>Order Now</h2>
+    <p>Ready to satisfy your cravings? Place your order now after viewing our menu!</p>
+    <p>To order, call us at: <a href="tel:+1234567890" style="color: #00ced1;">+1 (832) 782- 5670</a>.</p> <br>
+    <!-- Add link to make sure they are earning rewards -->
+    <p>To make sure you are earning rewards on your order, follow the steps below </p>
+    
+    <h2>Register for Rewards</h2>
+    <form id="rewardForm">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<section id="about">
+    <div class="container">
+        <img src="owner.jpg" alt="Owner's Headshot" style="width: 200px; height: 160px; border-radius: 50%; float: left; margin-right: 20px;">
+        <div style="overflow: hidden;"> <!-- Added to clear the float -->
+            <h2>Owner's Biography</h2>
+            <p>Oluwatomiwa Orioye is the owner and founder of GO Wings. We are located in the University of Houston Cafeteria Space. Samuel had a passion for cooking since he was young, and he decided to pursue it by opening his own restaurant chain.</p>
+            <p>We have up to 10 locations in Houston. In addition to his restaurant business, Oluwatomiwa is also involved in cinematography.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 GO WINGS. All rights reserved.</p>
+</footer>
+
+<script>
+    // JavaScript to show only the corresponding section when its link is clicked
+    window.onload = function() {
+        var sections = document.querySelectorAll('section');
+        var links = document.querySelectorAll('nav a');
+        
+        links.forEach(function(link) {
+            link.addEventListener('click', function() {
+                var sectionId = this.getAttribute('href').substring(1);
+                sections.forEach(function(section) {
+                    section.style.display = 'none';
+                });
+                document.getElementById(sectionId).style.display = 'block';
+            });
+        });
+    }
+</script>
+
+</body>
+</html>
